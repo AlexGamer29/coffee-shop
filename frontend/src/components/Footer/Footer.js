@@ -6,7 +6,7 @@ import { ColumnOne, ColumnTwo } from "./index";
 
 import "./Footer.css";
 
-export const Footer = () => {
+function Footer() {
   return (
     <footer id="footer">
       <div id="footer">
@@ -63,4 +63,6 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}
+
+export default Footer;

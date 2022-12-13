@@ -1,6 +1,6 @@
 footer#footer {
   background-color: #000;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   position: relative;
   width: 100%;
 }
@@ -21,6 +21,8 @@ div#footer {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  font-family: Inter Medium;
+  font-size: 20px;
   margin-left: calc(15px * -1);
   margin-right: calc(15px * -1);
 }
