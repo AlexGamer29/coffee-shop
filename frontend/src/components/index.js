@@ -1,3 +1,4 @@
-import Header from "./Home/Header/Header";
+import HomeHeader from "./Home/HomeHeader/HomeHeader";
+import HomeFeaturedProducts from "./Home/HomeFeaturedProducts/HomeFeaturedProducts"
 
-export { Header };
+export { HomeHeader, HomeFeaturedProducts };

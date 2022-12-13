@@ -1,7 +1,7 @@
 import React from "react";
-import "./Header.css";
+import "./HomeHeader.css";
 
-function Header() {
+function HomeHeader() {
   return (
     <>
       <header id="home-header">
@@ -17,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HomeHeader;
