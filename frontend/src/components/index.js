@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import HomeHeader from "./Home/HomeHeader/HomeHeader";
 <<<<<<< HEAD
 import HomeFeaturedProducts from "./Home/HomeFeaturedProducts/HomeFeaturedProducts"
@@ -14,3 +15,8 @@ import HomeFeaturedProducts from "./Home/HomeFeaturedProducts/HomeFeaturedProduc
 export { HomeHeader, HomeFeaturedProducts };
 >>>>>>> Stashed changes
 >>>>>>> master
+=======
+import Header from "./Home/Header/Header";
+
+export { Header };
+>>>>>>> origin/master
