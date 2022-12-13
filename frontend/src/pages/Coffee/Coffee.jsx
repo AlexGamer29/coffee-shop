@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Caphe = () => {
+const Coffee = () => {
   return (
     <div id="page">
       Ca phe
@@ -9,4 +9,4 @@ const Caphe = () => {
   );
 };
 
-export default Caphe;
+export default Coffee;

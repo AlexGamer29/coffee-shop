@@ -1,3 +1,6 @@
-import Header from "./Home/Header/Header";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/Footer";
 
-export { Header };
+import HomeHeader from "./Home/HomeHeader/HomeHeader";
+
+export { Navbar, Footer, HomeHeader };

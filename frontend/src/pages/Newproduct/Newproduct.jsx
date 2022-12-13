@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Newproduct = () => {
+const NewProduct = () => {
   return (
     <div id="page">
       sfdasfdsafd
@@ -9,4 +9,4 @@ const Newproduct = () => {
   );
 };
 
-export default Newproduct;
+export default NewProduct;

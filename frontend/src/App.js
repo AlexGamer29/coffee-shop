@@ -1,14 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import {Home,Contact,Caphe,Newproduct,Menu} from './pages/page.js'
-import {BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-import Navbar from "./components/Navbar/Navbar.js";
+import { Home, Contact, Coffee, NewProduct, Menu } from "./pages/index";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Footer, Navbar } from "./components";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Home />
+        <Router>
+          <Navbar />
+          <Home />
+          <Footer />
+        </Router>
       </div>
     </>
   );
