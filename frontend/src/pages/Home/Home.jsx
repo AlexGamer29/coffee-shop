@@ -1,13 +1,11 @@
 import React from "react";
-import { Footer, HomeHeader } from "../../components";
-
+import {Header} from "../../components/index"
 import "./Home.css";
 
 const Home = () => {
   return (
     <div id="page">
-      <HomeHeader />
-      <Footer />
+      <Header />
     </div>
   );
 };
