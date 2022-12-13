@@ -1,3 +1,4 @@
-import Header from "./Home/Header/Header";
+import HomeHeader from "./Home/HomeHeader/HomeHeader";
+import Footer from "./Footer/Footer";
 
-export { Header };
+export { Footer, HomeHeader };

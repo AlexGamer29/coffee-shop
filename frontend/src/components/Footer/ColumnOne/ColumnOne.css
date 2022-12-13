@@ -1,0 +1,14 @@
+.footer__info__item {
+  margin-bottom: 0.75rem;
+}
+
+.footer__info__links {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer__info__links:hover {
+  color: grey;
+  transition: all 0.4s;
+}
