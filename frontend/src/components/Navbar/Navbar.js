@@ -75,7 +75,7 @@ const Navbar = () => {
                     Cà phê
                   </NavLink>
                 </li>
-                <li className="menu-item ">
+                <li className="menu-item">
                   <NavLink
                     onClick={toggleClass}
                     activeClassName="is-active"
@@ -119,9 +119,9 @@ const Navbar = () => {
                         >
                           Cà phê đá
                         </NavLink>
-                        <p>Cà phê phong cách</p>
-                        <p>Cà phê sành điệu</p>
-                        <p>Cà phê moka</p>
+                        <p className="sub__menu__item">Cà phê phong cách</p>
+                        <p className="sub__menu__item">Cà phê sành điệu</p>
+                        <p className="sub__menu__item">Cà phê moka</p>
                       </li>
                       <li>
                         <NavLink
@@ -131,9 +131,9 @@ const Navbar = () => {
                         >
                           Cà phê sữa
                         </NavLink>
-                        <p>Cà phê sữa dừa</p>
-                        <p>Cà phê kem cheese</p>
-                        <p>Cà phê đường nâu</p>
+                        <p className="sub__menu__item">Cà phê sữa dừa</p>
+                        <p className="sub__menu__item">Cà phê kem cheese</p>
+                        <p className="sub__menu__item">Cà phê đường nâu</p>
                       </li>
                       <li>
                         <NavLink
@@ -143,9 +143,9 @@ const Navbar = () => {
                         >
                           Đá xay
                         </NavLink>
-                        <p>Cà phê socola</p>
-                        <p>Cà phê đá xay</p>
-                        <p>Hoàng đào đá xay</p>
+                        <p className="sub__menu__item">Cà phê socola</p>
+                        <p className="sub__menu__item">Cà phê đá xay</p>
+                        <p className="sub__menu__item">Hoàng đào đá xay</p>
                       </li>
                       <li>
                         <NavLink
@@ -155,8 +155,8 @@ const Navbar = () => {
                         >
                           Trà sữa
                         </NavLink>
-                        <p>Matcha đậu đỏ</p>
-                        <p>Trà sữa trân châu</p>
+                        <p className="sub__menu__item">Matcha đậu đỏ</p>
+                        <p className="sub__menu__item">Trà sữa trân châu</p>
                       </li>
                       <li>
                         <NavLink
@@ -166,9 +166,9 @@ const Navbar = () => {
                         >
                           Trà trái cây
                         </NavLink>
-                        <p>Chanh tươi hoa lài</p>
-                        <p>Trà tươi lục trà</p>
-                        <p>Trà đào</p>
+                        <p className="sub__menu__item">Chanh tươi hoa lài</p>
+                        <p className="sub__menu__item">Trà tươi lục trà</p>
+                        <p className="sub__menu__item">Trà đào</p>
                       </li>
                     </ul>
                   </div>
