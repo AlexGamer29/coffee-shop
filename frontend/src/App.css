@@ -1,11 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-body {
-  background-color: white;
-  margin: auto;
-  padding: 0px;
-  overflow-x: hidden;
-  background-repeat: repeat;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
 }
