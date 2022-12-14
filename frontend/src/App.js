@@ -10,7 +10,6 @@ function App() {
         <Router>
           <Navbar />
           <Home />
-          <Footer />
         </Router>
       </div>
     </>
