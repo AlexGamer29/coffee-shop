@@ -12,7 +12,7 @@ const Home = () => {
     <div id="page">
       <HomeHeader />
       <HomeFeaturedProducts />
-      <Footer />
+      
     </div>
   );
 };
