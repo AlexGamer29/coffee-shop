@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Contact, Coffee, NewProduct, Menu } from "./pages/index";
+import { Home, Contact, Coffee, Menu } from "./pages/index";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Footer, Navbar } from "./components";
 
@@ -13,7 +13,7 @@ function App() {
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/contact" element={<Contact/>}/>
             <Route exact path="/coffee" element={<Coffee/>}/>
-            <Route exact path="/new-product" element={<NewProduct/>}/>
+            {/* <Route exact path="/new-product" element={<NewProduct/>}/> */}
             <Route exact path="/menu" element={<Menu/>}/>
           </Routes>
           <Footer/>
