@@ -1,69 +1,12 @@
 #home-fProducts {
-    width: 100%;
-    padding-top: 2%;
-    padding-bottom: 10%;
-    /* margin-top: 111%; */
-    /* padding-top: 2%;
-    padding-bottom: 2%; */
+  padding: 5rem 0;
+  max-width: 1200px;
+  max-height: 1000px;
+  margin: 0 auto;
 }
 
 .home-fProducts-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 2%;
-    column-gap: 5%;
-    row-gap: 13%;
-    grid-template-columns: 20% 20% 20% 20%;
-    justify-content: center;
-    background-color: #ffffff;
-}
-
-.home-products {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    /* padding: 20px; */
-    /* width: 30%; */
-    /* margin: 5% 10% 5% 10%; */
-    height: 40vh;
-    font-size: 30px;
-    text-align: center;
-    /* display: flex;
-    flex-direction: column; */
-    float: left;
-}
-
-.home-products-imageContainer {
-    width: 100%;
-    height: 95%;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px -1px 45px -19px rgba(0,0,0,0.75);
--moz-box-shadow: 0px -1px 45px -19px rgba(0,0,0,0.75);
-box-shadow: 0px -1px 45px -19px rgba(0,0,0,0.75);
-
-}
-
-.home-products-image {
-    width: 60%;
-    height: 100%;
-
-}
-
-.home-products-information {
-    padding-top: 2%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    /* float: left; */
-}
-
-.home-products-name {
-    font-family: Inter Medium;
-    font-size: 1.4vw;
-}
-
-.home-products-price {
-    font-family: Inter Light;
-    font-size: 1vw;
-    color: #998A8A;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem 4rem;
 }

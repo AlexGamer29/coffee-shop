@@ -1,0 +1,36 @@
+.menu__list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.menu__list__img {
+  width: 269px;
+  height: 269px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+}
+
+.menu__list__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.menu__list__product-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  color: black;
+  margin: 0.5em 0 0.5em;
+}
+
+.menu__list__product-price {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 100%;
+  color: #998a8a;
+  margin: 0;
+}
