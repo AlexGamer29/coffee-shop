@@ -1,27 +1,12 @@
 #home-fProducts {
-  /* width: 100%;
-  padding-top: 2%;
-  padding-bottom: 10%; */
-  /* margin-top: 111%; */
-  /* padding-top: 2%;
-    padding-bottom: 2%; */
-  padding: 30px 30px;
+  padding: 5rem 0;
   max-width: 1200px;
   max-height: 1000px;
   margin: 0 auto;
 }
 
 .home-fProducts-container {
-  /* width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 2%;
-  column-gap: 5%;
-  row-gap: 13%;
-  grid-template-columns: 20% 20% 20% 20%;
-  justify-content: center;
-  background-color: #ffffff; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem 4rem;
 }
