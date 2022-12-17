@@ -7,5 +7,12 @@ import HomeRibbon from "./Home/HomeRibbon/HomeRibbon";
 import HomeCoffeeCarousel from "./Home/HomeCoffeeCarousel/HomeCoffeeCarousel";
 import MenuList from "./Menu/MenuList/MenuList";
 
-export { Navbar, Footer, HomeHeader, HomeFeaturedProducts, MenuList, HomeRibbon, HomeCoffeeCarousel
- };
+export {
+  Navbar,
+  Footer,
+  HomeHeader,
+  HomeFeaturedProducts,
+  MenuList,
+  HomeRibbon,
+  HomeCoffeeCarousel,
+};
