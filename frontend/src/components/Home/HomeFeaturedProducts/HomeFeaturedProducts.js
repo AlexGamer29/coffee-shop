@@ -13,6 +13,8 @@ function HomeFeaturedProducts() {
           <FeaturedProductItem />
           <FeaturedProductItem />
           <FeaturedProductItem />
+          <FeaturedProductItem />
+          <FeaturedProductItem />
         </div>
       </div>
     </>
