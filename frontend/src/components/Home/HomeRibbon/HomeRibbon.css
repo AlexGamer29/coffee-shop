@@ -9,13 +9,17 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-    margin-left: 5%;
+    /* padding-left: 5%; */
     padding: 3% 0 4% 0;
 }
 
 .homeRibbon-container-elements {
     width: 30%;
     align-items: center;
+}
+
+.homeRibbon-container-elements:first-child {
+    margin-left: 5%;
 }
 
 .homeRibbon-firstText {
