@@ -35,7 +35,7 @@ const Navbar = () => {
           {/* Add Logo  */}
           <div className="header__middle__logo">
             <NavLink exact activeClassName="is-active" to="/">
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" className="img__logo" />
             </NavLink>
           </div>
           <div className="header__middle__menus">
