@@ -7,7 +7,7 @@ function HomeRibbon() {
                 <div className='homeRibbon-container'>
                     <div className='homeRibbon-container-elements'>
                         <h1 className='homeRibbon-firstText'>50+</h1>
-                        <h1 className='homeRibbon-secondText'>ĐẠI LÝ</h1>
+                        <h1 className='homeRibbon-secondText' id='homeRibbon-firstColumn'>ĐẠI LÝ</h1>
                     </div>
                     <div className='homeRibbon-container-elements'>
                         <h1 className='homeRibbon-firstText'>10</h1>
