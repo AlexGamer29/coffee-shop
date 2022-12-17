@@ -1,0 +1,31 @@
+.homeRibbon {
+    width: 100%;
+    background-color: black;
+    height: auto;
+}
+
+.homeRibbon-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 5%;
+    padding: 3% 0 4% 0;
+}
+
+.homeRibbon-container-elements {
+    width: 30%;
+    align-items: center;
+}
+
+.homeRibbon-firstText {
+    color: #FBAE17;
+    font-family: Inter Bold;
+    font-size: 12vh;
+}
+
+.homeRibbon-secondText {
+    color: #FFFFFF;
+    font-family: Inter Bold;
+    font-size: 1.8vh;
+}
