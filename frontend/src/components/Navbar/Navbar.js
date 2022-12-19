@@ -70,7 +70,7 @@ const Navbar = () => {
                     exact
                     activeClassName="is-active"
                     onClick={toggleClass}
-                    to={`/Caphe`}
+                    to={`/coffee`}
                   >
                     Cà phê
                   </NavLink>
@@ -79,7 +79,7 @@ const Navbar = () => {
                   <NavLink
                     onClick={toggleClass}
                     activeClassName="is-active"
-                    to={`/Newproduct`}
+                    to={`/new-product`}
                   >
                     Sản phẩm mới
                   </NavLink>
@@ -88,7 +88,7 @@ const Navbar = () => {
                   onClick={toggleSubmenu}
                   className="menu-item sub__menus__arrows"
                 >
-                  <Link to="/Menu">
+                  <Link to="/menu">
                     Menu <FiChevronDown />
                   </Link>
                   <div className={boxClassSubMenu.join(" ")}>
@@ -106,7 +106,7 @@ const Navbar = () => {
                         <NavLink
                           onClick={toggleClass}
                           activeClassName="is-active"
-                          to={`/Online`}
+                          to={`/`}
                         >
                           Tất cả
                         </NavLink>
@@ -115,7 +115,7 @@ const Navbar = () => {
                         <NavLink
                           onClick={toggleClass}
                           activeClassName="is-active"
-                          to={`/Offline`}
+                          to={`/`}
                         >
                           Cà phê đá
                         </NavLink>
@@ -177,7 +177,7 @@ const Navbar = () => {
                   <NavLink
                     onClick={toggleClass}
                     activeClassName="is-active"
-                    to={`/Contact`}
+                    to={`/contact`}
                   >
                     Liên hệ
                   </NavLink>
