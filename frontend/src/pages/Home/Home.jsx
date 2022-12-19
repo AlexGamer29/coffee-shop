@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Navbar,
-  Footer,
   HomeRibbon,
   HomeHeader,
   HomeFeaturedProducts,
@@ -14,8 +12,8 @@ const Home = () => {
     <div id="page">
       <HomeHeader />
       <HomeFeaturedProducts />
-      <HomeRibbon/>
-      <HomeCoffeeCarousel/>
+      <HomeRibbon />
+      <HomeCoffeeCarousel />
     </div>
   );
 };
