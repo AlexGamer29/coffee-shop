@@ -25,7 +25,10 @@ function Footer() {
             <div className="footer__column__three">
               <div className="footer__info__item">
                 <p>
-                  <Link to="/hotline" className="footer__info__links">
+                  <Link
+                    to="/hotline"
+                    className="footer__info__links links__svg"
+                  >
                     <FaPhoneAlt />
                     &nbsp; Đặt hàng: 1800 6936
                   </Link>
@@ -33,7 +36,10 @@ function Footer() {
               </div>
               <div className="footer__info__item">
                 <p>
-                  <Link to="/location" className="footer__info__links">
+                  <Link
+                    to="/location"
+                    className="footer__info__links links__svg"
+                  >
                     <FaMapMarkerAlt />
                     &nbsp; Liên hệ
                   </Link>
@@ -45,14 +51,20 @@ function Footer() {
             <div className="footer__column__four">
               <div className="footer__info__item">
                 <p>
-                  <Link to="/facebook" className="footer__info__links">
+                  <Link
+                    to="/facebook"
+                    className="footer__info__links links__icon"
+                  >
                     <AiOutlineFacebook size={24} />
                   </Link>
                 </p>
               </div>
               <div className="footer__info__item">
                 <p>
-                  <Link to="/instagram" className="footer__info__links">
+                  <Link
+                    to="/instagram"
+                    className="footer__info__links links__icon"
+                  >
                     <AiOutlineInstagram size={24} />
                   </Link>
                 </p>

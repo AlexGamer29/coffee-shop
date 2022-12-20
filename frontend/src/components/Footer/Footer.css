@@ -66,6 +66,20 @@ div#footer {
   font-size: 20px;
 }
 
+.links__svg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.links__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer__info__links:hover {
   color: grey;
   transition: all 0.4s;
