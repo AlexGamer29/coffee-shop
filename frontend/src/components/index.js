@@ -11,6 +11,7 @@ import MenuList from "./Menu/MenuList/MenuList";
 import NewProductHeader from "./NewProduct/NewProductHeader/NewProductHeader";
 
 import CoffeeInstructions from "./Coffee/CoffeeInstructions/CoffeeInstructions";
+import CoffeeProductContent from "./Coffee/CoffeeProductContent/CoffeeProductContent";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   MenuList,
   NewProductHeader,
   CoffeeInstructions,
+  CoffeeProductContent
 };

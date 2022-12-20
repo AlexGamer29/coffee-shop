@@ -38,7 +38,7 @@ const NewProduct = () => {
               </div>
               <img className="w-2/4" src={NewProductImage2} alt="" />
             </div>
-            <button className="button m-auto w-44 rounded-2xl block bg-amber-400 p-4">
+            <button className="newproduct_button">
               XEM THÊM
             </button>
           </div>
