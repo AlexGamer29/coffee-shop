@@ -1,0 +1,39 @@
+.homeRibbon {
+  width: 100%;
+  background-color: black;
+  height: auto;
+}
+
+.homeRibbon-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  /* padding-left: 5%; */
+  padding: 3% 0 4% 0;
+}
+
+.homeRibbon-container-elements {
+  width: 30%;
+  align-items: center;
+}
+
+.homeRibbon-container-elements:first-child {
+  margin-left: 5%;
+}
+
+.homeRibbon-firstText {
+  color: #fbae17;
+  font-family: Inter Bold;
+  font-size: 12vh;
+}
+
+.homeRibbon-secondText {
+  color: #ffffff;
+  font-family: Inter Bold;
+  font-size: 1.8vh;
+}
+
+#homeRibbon-firstColumn {
+  margin-left: -3rem;
+}

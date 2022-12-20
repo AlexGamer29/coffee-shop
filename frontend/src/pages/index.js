@@ -4,4 +4,4 @@ import Contact from "./Contact/Contact";
 import Coffee from "./Coffee/Coffee";
 import Menu from "./Menu/Menu";
 
-export { Home, NewProduct, Contact, Coffee, Menu };
+export { Home, Contact, Coffee, Menu, NewProduct };
