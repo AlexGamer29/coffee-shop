@@ -1,8 +1,9 @@
 import React from "react";
 import {
   CoffeeHeader,
-  CoffeeInstructions,
   CoffeeProductContent,
+  CoffeePrice,
+  CoffeeInstructions,
 } from "../../components";
 
 import "./Coffee.css";
@@ -12,6 +13,7 @@ const Coffee = () => {
     <div id="page">
       <CoffeeHeader />
       <CoffeeProductContent />
+      <CoffeePrice />
       <CoffeeInstructions />
     </div>
   );
