@@ -89,7 +89,7 @@ const Navbar = () => {
                   className="menu-item sub__menus__arrows"
                 >
                   <Link to="/menu">
-                    Menu <FiChevronDown />
+                    Menu <FiChevronDown style={{ display: "inline-block" }} />
                   </Link>
                   <div className={boxClassSubMenu.join(" ")}>
                     <ul

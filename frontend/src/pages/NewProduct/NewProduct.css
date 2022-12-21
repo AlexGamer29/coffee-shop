@@ -3,3 +3,23 @@
   flex-direction: column;
   justify-content: center;
 }
+.newproduct_button{
+  width: 12%;
+  height: auto;
+  margin: auto;
+  display: block;
+  z-index: 2;
+  
+  background-color: #fbae17;
+  border: none;
+  border-radius: 100px;
+  height: 3vmax;
+  font-family: Inter Bold;
+  font-size: 17px; 
+}
+.newproduct_button:hover{
+  background-color: #000;
+  color: #fbae17;
+  transition: 0.5s background-color;
+  transition: 0.2s color;
+}

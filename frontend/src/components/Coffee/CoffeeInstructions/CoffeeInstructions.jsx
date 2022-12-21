@@ -13,7 +13,7 @@ const CoffeeInstructions = () => {
         </video>
         <div className="w-2/4s items-center py-28 px-8">
           <h1 className="content1 font-bold pb-8 text-3xl">
-            CÀ PHÊ SỮA SOCOLA
+            Hướng dẫn sử dụng
           </h1>
           <div className="text-2xl inline">
             <p className="flex">
