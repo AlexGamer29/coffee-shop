@@ -10,6 +10,7 @@ import MenuList from "./Menu/MenuList/MenuList";
 
 import NewProductHeader from "./NewProduct/NewProductHeader/NewProductHeader";
 
+import CoffeeHeader from "./Coffee/CoffeeHeader/CoffeeHeader";
 import CoffeeInstructions from "./Coffee/CoffeeInstructions/CoffeeInstructions";
 import CoffeeProductContent from "./Coffee/CoffeeProductContent/CoffeeProductContent";
 
@@ -22,6 +23,7 @@ export {
   HomeCoffeeCarousel,
   MenuList,
   NewProductHeader,
+  CoffeeHeader,
   CoffeeInstructions,
-  CoffeeProductContent
+  CoffeeProductContent,
 };
