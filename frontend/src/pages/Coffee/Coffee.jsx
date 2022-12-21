@@ -1,13 +1,17 @@
 import React from "react";
-import { CoffeeInstructions, CoffeeProductContent } from "../../components";
-
+import {
+  CoffeeProductContent,
+  CoffeePrice,
+  CoffeeInstructions,
+} from "../../components";
 
 import "./Coffee.css";
 
 const Coffee = () => {
   return (
     <div id="page">
-      <CoffeeProductContent/>
+      <CoffeeProductContent />
+      <CoffeePrice />
       <CoffeeInstructions />
     </div>
   );
