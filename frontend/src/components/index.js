@@ -10,8 +10,10 @@ import MenuList from "./Menu/MenuList/MenuList";
 
 import NewProductHeader from "./NewProduct/NewProductHeader/NewProductHeader";
 
-import CoffeeInstructions from "./Coffee/CoffeeInstructions/CoffeeInstructions";
+import CoffeeHeader from "./Coffee/CoffeeHeader/CoffeeHeader";
 import CoffeeProductContent from "./Coffee/CoffeeProductContent/CoffeeProductContent";
+import CoffeePrice from "./Coffee/CoffeePrice/CoffeePrice";
+import CoffeeInstructions from "./Coffee/CoffeeInstructions/CoffeeInstructions";
 
 export {
   Navbar,
@@ -22,6 +24,8 @@ export {
   HomeCoffeeCarousel,
   MenuList,
   NewProductHeader,
+  CoffeeHeader,
+  CoffeeProductContent,
+  CoffeePrice,
   CoffeeInstructions,
-  CoffeeProductContent
 };
