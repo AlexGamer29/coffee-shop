@@ -22,6 +22,6 @@ class Category extends Model
      */
     public function CategoryBelongsToProduct(): BelongsTo
     {
-        return $this->belongsTo("Products", 'categoryId');
+        return $this->belongsTo(Products::class, 'categoryId');
     }
 }
