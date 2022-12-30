@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
-
 import { Home, Contact, Coffee, Menu, NewProduct } from "./pages/index";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { Footer, Navbar } from "./components";
+import ReactGA from "react-ga";
 
 import "./App.css";
 
-import ReactGA from "react-ga";
-const TRACKING_ID = "UA-230322881-1";
-ReactGA.initialize(TRACKING_ID);
-
 function App() {
+  ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);

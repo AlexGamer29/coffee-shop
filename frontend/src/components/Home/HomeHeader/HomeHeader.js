@@ -1,9 +1,10 @@
 import React from "react";
-import UseAnalyticsEventTracker from "../../UseAnalyticsEventTracker/UseAnalyticsEventTracker";
+import { useAnalyticsEventTracker } from "../../../hooks/";
+
 import "./HomeHeader.css";
 
 function HomeHeader() {
-  const gaEventTracker = UseAnalyticsEventTracker("Tìm hiểu thêm");
+  const gaEventTracker = useAnalyticsEventTracker("Tìm hiểu thêm");
   return (
     <>
       <header id="home-header">
@@ -24,7 +25,7 @@ function HomeHeader() {
           <button
             type="button"
             className="home-header-button"
-            onClick={() => gaEventTracker("HOME-CTA Tìm hiểu thêm ")}
+            onClick={() => gaEventTracker("HOME-CTA Tìm hiểu thêm")}
           >
             TÌM HIỂU THÊM
           </button>
