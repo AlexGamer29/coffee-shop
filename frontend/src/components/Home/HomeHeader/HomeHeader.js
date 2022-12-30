@@ -1,7 +1,9 @@
 import React from "react";
+import UseAnalyticsEventTracker from "../../UseAnalyticsEventTracker/UseAnalyticsEventTracker";
 import "./HomeHeader.css";
 
 function HomeHeader() {
+  const gaEventTracker = UseAnalyticsEventTracker("Tìm hiểu thêm");
   return (
     <>
       <header id="home-header">
@@ -14,8 +16,18 @@ function HomeHeader() {
         <button className="home-header-button">TÌM HIỂU THÊM</button> */}
         <div className="home-header-container">
           <h1 className="home-header-title">SẢN PHẨM MILANO COFFEE</h1>
-          <p className="home-header-text">Chúng tôi muốn bán một sản phẩm cà phê sạch, chất lượng, với giá thành bình dân để người tiêu dùng được tận hưởng chính xác vị của cà phê</p>
-          <button type="button" className="home-header-button">TÌM HIỂU THÊM</button>
+          <p className="home-header-text">
+            Chúng tôi muốn bán một sản phẩm cà phê sạch, chất lượng, với giá
+            thành bình dân để người tiêu dùng được tận hưởng chính xác vị của cà
+            phê
+          </p>
+          <button
+            type="button"
+            className="home-header-button"
+            onClick={() => gaEventTracker("HOME-CTA Tìm hiểu thêm ")}
+          >
+            TÌM HIỂU THÊM
+          </button>
         </div>
         {/* <div className="test">
           <h1 className="home-header-title">SẢN PHẨM MILANO COFFEE</h1>
