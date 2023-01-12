@@ -23,13 +23,4 @@ class Products extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function ProductsHasOneCategory(): HasOne
-    {
-        return $this->HasOne(Category::class, 'id');
-    }
-
-    public function ProductsHasOneSubCategory(): HasOne
-    {
-        return $this->hasOne(SubCategory::class, 'id');
-    }
 }

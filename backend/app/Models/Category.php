@@ -10,6 +10,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $table = 'category';
+    public $timestamps = false;
 
     protected $fillable = [
         'name',
@@ -20,8 +21,4 @@ class Category extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function CategoryBelongsToProduct(): BelongsTo
-    {
-        return $this->belongsTo(Products::class, 'categoryId');
-    }
 }

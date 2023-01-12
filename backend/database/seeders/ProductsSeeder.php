@@ -21,7 +21,7 @@ class ProductsSeeder extends Seeder
                     'categoryId' => '1',
                     'subCategoryId' => '1',
                     'name' => 'Trà long nhãn hạt sen',
-                    'price' => '45000'
+                    'price' => '45000',
                 ],
                 [
                     'categoryId' => '1',

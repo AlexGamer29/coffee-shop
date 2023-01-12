@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductsController extends Controller
 {
@@ -13,7 +15,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Products::all();
+        return $products->toArray();
     }
 
     /**
@@ -34,7 +37,25 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        $validator = Validator::make($input, [
+            'categoryId' => 'required',
+            'subCategoryId' => 'required',
+            'name' => 'required',
+            'price' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return response()->json([
+                "success" => false,
+                "message" => "Products create fails",
+            ]);
+        }
+        $products = Products::create($input);
+        return response()->json([
+            "success" => true,
+            "message" => "Products created successfully.",
+            "data" => $products
+        ]);
     }
 
     /**
@@ -45,7 +66,18 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $products = Products::find($id);
+        if (is_null($products)) {
+            return response()->json([
+                "success" => false,
+                "message" => "Products not found.",
+            ]);
+        }
+        return response()->json([
+            "success" => true,
+            "message" => "Products retrieved successfully.",
+            "data" => $products
+        ]);
     }
 
     /**
@@ -68,8 +100,30 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $response = ['message' => 'update function'];
-        return response($response, 200);
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'categoryId' => 'required',
+            'subCategoryId' => 'required',
+            'name' => 'required',
+            'price' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                "success" => false,
+                "message" => "Products update fails.",
+            ]);
+        }
+
+        $products = Products::find($id);
+        $products->update($request->all());
+
+        return response()->json([
+            "success" => true,
+            "message" => "Products updated successfully.",
+            "data" => $products
+        ]);
     }
 
     /**
@@ -80,7 +134,12 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        $response = ['message' => 'delete function'];
-        return response($response, 200);
+        $products = Products::find($id);
+        $productName = $products["name"];
+        $products->delete();
+        return response()->json([
+            "success" => true,
+            "message" => "Products $productName deleted successfully.",
+        ]);
     }
 }

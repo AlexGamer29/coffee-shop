@@ -10,6 +10,7 @@ class SubCategory extends Model
 {
     use HasFactory;
     protected $table = 'subcategory';
+    public $timestamps = false;
 
     protected $fillable = [
         'name',
@@ -21,13 +22,4 @@ class SubCategory extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function SubCategoryBelongsToManyCategory(): BelongsToMany
-    {
-        return $this->belongsToMany(Category::class, 'id');
-    }
-
-    public function SubCategoryBelongsToManyProduct(): BelongsToMany
-    {
-        return $this->belongsToMany(Products::class, 'subCategoryId');
-    }
 }

@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 import { Home, Contact, Coffee, Menu, NewProduct } from "./pages/index";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Footer, Navbar } from "./components";
 import ReactGA from "react-ga";
 
