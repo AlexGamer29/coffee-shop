@@ -3,8 +3,11 @@ import { NewProductHeader } from "../../components";
 import "./NewProduct.css";
 
 import { NewProductImage1, NewProductImage2 } from "../../constants/image";
+import { useAnalyticsEventTracker } from "../../hooks";
 
 const NewProduct = () => {
+  const gaEventTracker = useAnalyticsEventTracker("Xem thêm");
+
   return (
     <>
       <div id="page">
@@ -38,7 +41,10 @@ const NewProduct = () => {
               </div>
               <img className="w-2/4" src={NewProductImage2} alt="" />
             </div>
-            <button className="newproduct_button">
+            <button
+              className="newproduct_button"
+              onClick={() => gaEventTracker("NEWPRODUCT-CTA Xem thêm")}
+            >
               XEM THÊM
             </button>
           </div>

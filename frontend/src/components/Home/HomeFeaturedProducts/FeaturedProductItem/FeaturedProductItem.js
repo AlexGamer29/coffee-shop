@@ -1,17 +1,19 @@
 import React from "react";
 import "./FeaturedProductItem.css";
+import { CoffeeFeatured } from "../../../../constants/image";
 
-function FeaturedProductItem() {
+function FeaturedProductItem(props) {
   return (
     <div className="menu__list__container">
-      <img
-        className="menu__list__img"
-        src="https://product.hstatic.net/1000075078/product/1638440015_banh-mi-vietnam_75185017016d4a9da8ac60fb1c68a072_large.jpg"
-        alt=""
-      />
+      <img className="menu__list__img" src={CoffeeFeatured} alt="" />
       <div className="menu__list__content">
-        <h1 className="menu__list__product-title">Cà phê sữa đá</h1>
-        <h3 className="menu__list__product-price">35.000đ</h3>
+        <h1 className="menu__list__product-title">{props.data.name}</h1>
+        <h3 className="menu__list__product-price">
+          {props.data.price.toLocaleString("it-IT", {
+            style: "currency",
+            currency: "VND",
+          })}
+        </h3>
       </div>
     </div>
   );
