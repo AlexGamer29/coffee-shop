@@ -21,6 +21,10 @@ const Dashboard = () => {
   const [validationErrors, setValidationErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
+  const headers = {
+    Authorization: `Bearer ${localStorage.getItem("access-token")}`,
+  };
+
   const handleCreateNewRow = async (values) => {
     try {
       const data = {
@@ -30,7 +34,7 @@ const Dashboard = () => {
         price: values.price,
       };
       const createProductsURL = `http://127.0.0.1:8000/api/products`;
-      const response = await axios.post(createProductsURL, data);
+      const response = await axios.post(createProductsURL, data, { headers });
       setLoading(true);
       console.log(response);
     } catch (error) {
@@ -52,7 +56,7 @@ const Dashboard = () => {
         };
         const products_id = row.getValue("id");
         const editProductsURL = `http://127.0.0.1:8000/api/products/${products_id}`;
-        const response = await axios.patch(editProductsURL, data);
+        const response = await axios.patch(editProductsURL, data, { headers });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -82,7 +86,7 @@ const Dashboard = () => {
       try {
         const products_id = row.getValue("id");
         const deleteProductsURL = `http://127.0.0.1:8000/api/products/${products_id}`;
-        const response = axios.delete(deleteProductsURL);
+        const response = axios.delete(deleteProductsURL, { headers });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -175,7 +179,7 @@ const Dashboard = () => {
   const getAllProducts = async () => {
     try {
       const getAllProductsURL = `http://127.0.0.1:8000/api/products/`;
-      const response = await axios.get(getAllProductsURL);
+      const response = await axios.get(getAllProductsURL, { headers });
       setLoading(true);
       console.log(response);
       setTableData([...response.data]);

@@ -7,6 +7,7 @@ import Category from "./scenes/category";
 import SubCategory from "./scenes/subcategory";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
+import LoginForm from "./scenes/login/";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -21,7 +22,8 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Products />} />
+              <Route path="/" element={<LoginForm />} />
+              <Route path="/products" element={<Products />} />
               <Route path="/category" element={<Category />} />
               <Route path="/sub-category" element={<SubCategory />} />
             </Routes>

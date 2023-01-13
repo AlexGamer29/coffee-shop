@@ -21,6 +21,10 @@ const Dashboard = () => {
   const [validationErrors, setValidationErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
+  const headers = {
+    Authorization: `Bearer ${localStorage.getItem("access-token")}`,
+  };
+
   const handleCreateNewRow = async (values) => {
     try {
       const data = {
@@ -28,7 +32,9 @@ const Dashboard = () => {
         categoryId: values.categoryId,
       };
       const createSubCategoryURL = `http://127.0.0.1:8000/api/sub-category`;
-      const response = await axios.post(createSubCategoryURL, data);
+      const response = await axios.post(createSubCategoryURL, data, {
+        headers,
+      });
       setLoading(true);
       console.log(response);
     } catch (error) {
@@ -51,7 +57,9 @@ const Dashboard = () => {
         };
         const subcategory_id = row.getValue("id");
         const editSubCategoryURL = `http://127.0.0.1:8000/api/sub-category/${subcategory_id}`;
-        const response = await axios.patch(editSubCategoryURL, data);
+        const response = await axios.patch(editSubCategoryURL, data, {
+          headers,
+        });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -82,7 +90,7 @@ const Dashboard = () => {
       try {
         const subcategory_id = row.getValue("id");
         const deleteSubCategoryURL = `http://127.0.0.1:8000/api/sub-category/${subcategory_id}`;
-        const response = axios.delete(deleteSubCategoryURL);
+        const response = axios.delete(deleteSubCategoryURL, { headers });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -170,7 +178,7 @@ const Dashboard = () => {
   const getAllSubCategories = async () => {
     try {
       const getAllSubCategoriesURL = `http://127.0.0.1:8000/api/sub-category/`;
-      const response = await axios.get(getAllSubCategoriesURL);
+      const response = await axios.get(getAllSubCategoriesURL, { headers });
       setLoading(true);
       console.log(response);
       setTableData([...response.data]);

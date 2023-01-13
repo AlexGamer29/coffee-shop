@@ -4,11 +4,9 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "./index.css";
 import axios from "axios";
-import useAuth from "../../context/AuthProvider";
 
 export default function LoginForm() {
   const history = useNavigate();
-  const { login } = useAuth();
 
   const {
     register,
@@ -29,9 +27,8 @@ export default function LoginForm() {
       );
       const accessToken = response?.data?.token;
       if (accessToken) {
-        login().then(() => {
-          history("/");
-        });
+        localStorage.setItem("access-token", accessToken);
+        history("/products");
       }
     } catch (error) {}
   };

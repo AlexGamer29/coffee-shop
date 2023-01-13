@@ -22,13 +22,17 @@ const Dashboard = () => {
 
   const [loading, setLoading] = useState(false);
 
+  const headers = {
+    Authorization: `Bearer ${localStorage.getItem("access-token")}`,
+  };
+
   const handleCreateNewRow = async (values) => {
     try {
       const data = {
         name: values.name,
       };
       const createCategoriesURL = `http://127.0.0.1:8000/api/category`;
-      const response = await axios.post(createCategoriesURL, data);
+      const response = await axios.post(createCategoriesURL, data, { headers });
       setLoading(true);
       console.log(response);
     } catch (error) {
@@ -48,7 +52,7 @@ const Dashboard = () => {
         };
         const category_id = row.getValue("id");
         const editCategoryURL = `http://127.0.0.1:8000/api/category/${category_id}`;
-        const response = await axios.patch(editCategoryURL, data);
+        const response = await axios.patch(editCategoryURL, data, { headers });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -78,7 +82,7 @@ const Dashboard = () => {
       try {
         const category_id = row.getValue("id");
         const deleteCategoryURL = `http://127.0.0.1:8000/api/category/${category_id}`;
-        const response = axios.delete(deleteCategoryURL);
+        const response = axios.delete(deleteCategoryURL, { headers });
         setLoading(true);
         console.log(response);
       } catch (error) {
@@ -158,7 +162,7 @@ const Dashboard = () => {
   const getAllCategories = async () => {
     try {
       const getAllCategoriesURL = `http://127.0.0.1:8000/api/category/`;
-      const response = await axios.get(getAllCategoriesURL);
+      const response = await axios.get(getAllCategoriesURL, { headers });
       setLoading(true);
       console.log(response);
       setTableData([...response.data]);

@@ -45,43 +45,42 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 });
 
 Route::middleware('auth:api')->group(function () {
+
+    Route::post('/logout', [PassportAuthController::class, 'logout']);
+
+    // Category
+    // Get all categories
+    Route::get('/category', [CategoryController::class, 'index']);
+    // Create category
+    Route::post('/category', [CategoryController::class, 'store']);
+    // Get category by id
+    Route::get('/category/{id}', [CategoryController::class, 'show']);
+    // Update category
+    Route::patch('/category/{id}', [CategoryController::class, 'update']);
+    // Delete category
+    Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
+
+    // Sub-category
+    // Get all sub-categories
+    Route::get('/sub-category', [SubCategoryController::class, 'index']);
+    // Create sub-category
+    Route::post('/sub-category', [SubCategoryController::class, 'store']);
+    // Get sub-category by id
+    Route::get('/sub-category/{id}', [SubCategoryController::class, 'show']);
+    // Update sub-category
+    Route::patch('/sub-category/{id}', [SubCategoryController::class, 'update']);
+    // Delete sub-category
+    Route::delete('/sub-category/{id}', [SubCategoryController::class, 'destroy']);
+
+    // Products
+    // Get all products
+    Route::get('/products', [ProductsController::class, 'index']);
+    // Create product
+    Route::post('/products', [ProductsController::class, 'store']);
+    // Get product by id
+    Route::get('/products/{id}', [ProductsController::class, 'show']);
+    // Update product
+    Route::patch('/products/{id}', [ProductsController::class, 'update']);
+    // Delete product
+    Route::delete('/products/{id}', [ProductsController::class, 'destroy']);
 });
-
-
-Route::post('/logout', [PassportAuthController::class, 'logout']);
-
-// Category
-// Get all categories
-Route::get('/category', [CategoryController::class, 'index']);
-// Create category
-Route::post('/category', [CategoryController::class, 'store']);
-// Get category by id
-Route::get('/category/{id}', [CategoryController::class, 'show']);
-// Update category
-Route::patch('/category/{id}', [CategoryController::class, 'update']);
-// Delete category
-Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
-
-// Sub-category
-// Get all sub-categories
-Route::get('/sub-category', [SubCategoryController::class, 'index']);
-// Create sub-category
-Route::post('/sub-category', [SubCategoryController::class, 'store']);
-// Get sub-category by id
-Route::get('/sub-category/{id}', [SubCategoryController::class, 'show']);
-// Update sub-category
-Route::patch('/sub-category/{id}', [SubCategoryController::class, 'update']);
-// Delete sub-category
-Route::delete('/sub-category/{id}', [SubCategoryController::class, 'destroy']);
-
-// Products
-// Get all products
-Route::get('/products', [ProductsController::class, 'index']);
-// Create product
-Route::post('/products', [ProductsController::class, 'store']);
-// Get product by id
-Route::get('/products/{id}', [ProductsController::class, 'show']);
-// Update product
-Route::patch('/products/{id}', [ProductsController::class, 'update']);
-// Delete product
-Route::delete('/products/{id}', [ProductsController::class, 'destroy']);
