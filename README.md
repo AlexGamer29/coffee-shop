@@ -45,7 +45,12 @@
    ```sh
    php artisan passport:install
    ```
-7. Start the laravel app at https:/localhost:8000/
+7. Reset config for app
+   ```sh
+   php artisan key:generate
+   php artisan config:cache
+   ```
+8. Start the laravel app at https:/localhost:8000/
    ```sh
    php artisan serve
    ```
