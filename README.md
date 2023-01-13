@@ -21,7 +21,7 @@
    cd backend
    ```
 2. Create a copy of .env file from .env.example and edit the following fields:
-Note: INITIAL_USER_NAME only wrap in double-quotes
+Note: INITIAL_USER_NAME, INITIAL_USER_EMAIL, INITIAL_USER_PASSWORDHASH wrap in double-quotes
    ```sh
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
