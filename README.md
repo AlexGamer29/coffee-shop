@@ -95,5 +95,5 @@ Note: INITIAL_USER_NAME, INITIAL_USER_EMAIL, INITIAL_USER_PASSWORDHASH wrap in d
    ```sh
    npm start --force
    ```
-5. Navigate to http:/localhost:3001/ and login with email "minhduc@gmail.com" and password "123456789"
+5. Navigate to http:/localhost:3001/ and login with email and password in INITIAL_USER_EMAIL, INITIAL_USER_PASSWORDHASH
 6. From there, we can start to change table in database
