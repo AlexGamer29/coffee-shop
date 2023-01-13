@@ -9,7 +9,7 @@ function HomeFeaturedProducts() {
 
   const getAllProducts = async () => {
     try {
-      const getAllProductsURL = `http://127.0.0.1:8000/api/products/`;
+      const getAllProductsURL = `http://127.0.0.1:8000/api/product/`;
       const response = await axios.get(getAllProductsURL);
       setLoading(true);
       console.log(response);
