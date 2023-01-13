@@ -115,9 +115,11 @@ Note: INITIAL_USER_NAME, INITIAL_USER_EMAIL, INITIAL_USER_PASSWORDHASH wrap in d
 1. In order to access Category table, navigate to click to __Category__ tab.
 
 2. To create new Category, click on __Create Category__ button and fill only __name__ field. It is not required to enter __id__ field, it leads to an error.
+
 ![Category](https://i.imgur.com/rltVRw5.png)
 
 3. To edit Category, click on __Edit Category__ icon and fill __name__ field and click __"Save"__.
+
 ![Category](https://i.imgur.com/ZCDKCRH.png)
 
 4. To delete Category, click on __Delete Category__ icon.
