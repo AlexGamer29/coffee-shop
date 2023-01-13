@@ -22,12 +22,12 @@
    ```
 2. Create a copy of .env file from .env.example and edit the following fields:
    ```sh
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=coffee-shop
-    DB_USERNAME=root
-    DB_PASSWORD=
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=coffee-shop
+   DB_USERNAME=root
+   DB_PASSWORD=
    ``` 
 3. Install Composer packages
    ```sh
@@ -45,7 +45,12 @@
    ```sh
    php artisan passport:install
    ```
-7. Start the laravel app at https:/localhost:8000/
+7. Reset config for app
+   ```sh
+   php artisan key:generate
+   php artisan config:cache
+   ```
+8. Start the laravel app at https:/localhost:8000/
    ```sh
    php artisan serve
    ```
