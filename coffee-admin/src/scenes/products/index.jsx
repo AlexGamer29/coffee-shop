@@ -236,7 +236,7 @@ const Dashboard = () => {
               onClick={() => setCreateModalOpen(true)}
               variant="contained"
             >
-              Create New Account
+              Create New Product
             </Button>
           )}
         />
@@ -268,7 +268,7 @@ export const CreateNewAccountModal = ({ open, columns, onClose, onSubmit }) => {
 
   return (
     <Dialog open={open}>
-      <DialogTitle textAlign="center">Create New Account</DialogTitle>
+      <DialogTitle textAlign="center">Create New Product</DialogTitle>
       <DialogContent>
         <form onSubmit={(e) => e.preventDefault()}>
           <Stack
@@ -294,7 +294,7 @@ export const CreateNewAccountModal = ({ open, columns, onClose, onSubmit }) => {
       <DialogActions sx={{ p: "1.25rem" }}>
         <Button onClick={onClose}>Cancel</Button>
         <Button color="secondary" onClick={handleSubmit} variant="contained">
-          Create New Account
+          Create New Product
         </Button>
       </DialogActions>
     </Dialog>

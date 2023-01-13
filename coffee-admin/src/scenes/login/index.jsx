@@ -43,7 +43,7 @@ export default function LoginForm() {
           <div id="form__container__wrap">
             <form onSubmit={handleSubmit(onhandleSubmit)}>
               <div id="form__header" className="form__item">
-                <h1 id="form__header-primary">Sign in to TodoList</h1>
+                <h1 id="form__header-primary">Sign in to your account</h1>
               </div>
               <div id="form__email" className="form__item">
                 <h3 id="form__email-title" className="form__field-title">
@@ -106,20 +106,13 @@ export default function LoginForm() {
                   </span>
                 )}
               </div>
-              <div id="form__forgot-password" className="form__item">
-                <Link to="/forgot-password">
-                  <span>Forgot password?</span>
-                </Link>
-              </div>
               <div id="form__login-btn" className="form__item">
                 <button id="signin" type="submit">
                   Sign in
                 </button>
               </div>
               <div id="form__to-signup">
-                <span>
-                  Don't have an account? <Link to="/sign-up">Sign up now</Link>
-                </span>
+                
               </div>
             </form>
           </div>
