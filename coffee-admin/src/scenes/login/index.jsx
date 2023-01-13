@@ -30,7 +30,9 @@ export default function LoginForm() {
         localStorage.setItem("access-token", accessToken);
         history("/products");
       }
-    } catch (error) {}
+    } catch (error) {
+      alert(error)
+    }
   };
 
   useEffect(() => {}, []);

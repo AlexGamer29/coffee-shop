@@ -36,9 +36,9 @@ const Dashboard = () => {
         headers,
       });
       setLoading(true);
-      console.log(response);
+      alert(response.data.message);
     } catch (error) {
-      console.log(error.code + error);
+      alert(error);
     }
     getAllSubCategories();
     setLoading(false);
@@ -61,9 +61,9 @@ const Dashboard = () => {
           headers,
         });
         setLoading(true);
-        console.log(response);
+        alert(response.data.message);
       } catch (error) {
-        console.log(error.code + error);
+        alert(error);
       }
       getAllSubCategories();
       setLoading(false);
@@ -77,6 +77,18 @@ const Dashboard = () => {
     setValidationErrors({});
   };
 
+  const deleteSubCategory = async (row) => {
+    try {
+      const subcategory_id = row.getValue("id");
+      const deleteSubCategoryURL = `http://127.0.0.1:8000/api/sub-category/${subcategory_id}`;
+      const response = await axios.delete(deleteSubCategoryURL, { headers });
+      setLoading(true);
+      alert(response.data.message);
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   const handleDeleteRow = useCallback(
     (row) => {
       if (
@@ -87,15 +99,7 @@ const Dashboard = () => {
         return;
       }
 
-      try {
-        const subcategory_id = row.getValue("id");
-        const deleteSubCategoryURL = `http://127.0.0.1:8000/api/sub-category/${subcategory_id}`;
-        const response = axios.delete(deleteSubCategoryURL, { headers });
-        setLoading(true);
-        console.log(response);
-      } catch (error) {
-        console.log(error.code + error);
-      }
+      deleteSubCategory(row);
 
       tableData.splice(row.index, 1);
       setTableData([...tableData]);
@@ -183,7 +187,7 @@ const Dashboard = () => {
       console.log(response);
       setTableData([...response.data]);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
     setLoading(false);
   };

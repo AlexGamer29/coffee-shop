@@ -36,9 +36,9 @@ const Dashboard = () => {
       const createProductsURL = `http://127.0.0.1:8000/api/products`;
       const response = await axios.post(createProductsURL, data, { headers });
       setLoading(true);
-      console.log(response);
+      alert(response.data.message);
     } catch (error) {
-      console.log(error.code + error);
+      alert(error);
     }
     getAllProducts();
     setLoading(false);
@@ -58,9 +58,9 @@ const Dashboard = () => {
         const editProductsURL = `http://127.0.0.1:8000/api/products/${products_id}`;
         const response = await axios.patch(editProductsURL, data, { headers });
         setLoading(true);
-        console.log(response);
+        alert(response.data.message);
       } catch (error) {
-        console.log(error.code + error);
+        alert(error);
       }
       getAllProducts();
       setLoading(false);
@@ -74,6 +74,18 @@ const Dashboard = () => {
     setValidationErrors({});
   };
 
+  const deleteProducts = async (row) => {
+    try {
+      const products_id = row.getValue("id");
+      const deleteProductsURL = `http://127.0.0.1:8000/api/products/${products_id}`;
+      const response = await axios.delete(deleteProductsURL, { headers });
+      setLoading(true);
+      alert(response.data.message);
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   const handleDeleteRow = useCallback(
     (row) => {
       if (
@@ -83,15 +95,8 @@ const Dashboard = () => {
       ) {
         return;
       }
-      try {
-        const products_id = row.getValue("id");
-        const deleteProductsURL = `http://127.0.0.1:8000/api/products/${products_id}`;
-        const response = axios.delete(deleteProductsURL, { headers });
-        setLoading(true);
-        console.log(response);
-      } catch (error) {
-        console.log(error.code + error);
-      }
+
+      deleteProducts(row);
 
       tableData.splice(row.index, 1);
       setTableData([...tableData]);
@@ -181,10 +186,9 @@ const Dashboard = () => {
       const getAllProductsURL = `http://127.0.0.1:8000/api/products/`;
       const response = await axios.get(getAllProductsURL, { headers });
       setLoading(true);
-      console.log(response);
       setTableData([...response.data]);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
     setLoading(false);
   };

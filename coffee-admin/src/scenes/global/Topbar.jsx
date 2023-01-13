@@ -5,6 +5,7 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -12,9 +13,26 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
   const navigate = useNavigate();
 
-  const logOut = () => {
-    localStorage.clear();
-    navigate("/");
+  // const logOut = async () => {};
+
+  const logOut = async (data, e) => {
+    try {
+      const headers = {
+        Authorization: `Bearer ${localStorage.getItem("access-token")}`,
+      };
+      const response = await axios.post(
+        "http://localhost:8000/api/logout",
+        {},
+        {
+          headers,
+        }
+      );
+      localStorage.clear();
+      navigate("/");
+      alert(response.data.message);
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
@@ -28,9 +46,7 @@ const Topbar = () => {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        <IconButton
-          onClick={logOut}
-        >
+        <IconButton onClick={logOut}>
           <LogoutOutlinedIcon />
         </IconButton>
       </Box>

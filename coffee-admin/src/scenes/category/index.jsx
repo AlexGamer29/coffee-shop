@@ -34,9 +34,9 @@ const Dashboard = () => {
       const createCategoriesURL = `http://127.0.0.1:8000/api/category`;
       const response = await axios.post(createCategoriesURL, data, { headers });
       setLoading(true);
-      console.log(response);
+      alert(response.data.message);
     } catch (error) {
-      console.log(error.code + error);
+      alert(error);
     }
     getAllCategories();
     setLoading(false);
@@ -54,9 +54,9 @@ const Dashboard = () => {
         const editCategoryURL = `http://127.0.0.1:8000/api/category/${category_id}`;
         const response = await axios.patch(editCategoryURL, data, { headers });
         setLoading(true);
-        console.log(response);
+        alert(response.data.message);
       } catch (error) {
-        console.log(error.code + error);
+        alert(error);
       }
       getAllCategories();
       setLoading(false);
@@ -70,6 +70,18 @@ const Dashboard = () => {
     setValidationErrors({});
   };
 
+  const deleteCategory = async (row) => {
+    try {
+      const category_id = row.getValue("id");
+      const deleteCategoryURL = `http://127.0.0.1:8000/api/category/${category_id}`;
+      const response = await axios.delete(deleteCategoryURL, { headers });
+      setLoading(true);
+      alert(response.data.message);
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   const handleDeleteRow = useCallback(
     (row) => {
       if (
@@ -79,15 +91,8 @@ const Dashboard = () => {
       ) {
         return;
       }
-      try {
-        const category_id = row.getValue("id");
-        const deleteCategoryURL = `http://127.0.0.1:8000/api/category/${category_id}`;
-        const response = axios.delete(deleteCategoryURL, { headers });
-        setLoading(true);
-        console.log(response);
-      } catch (error) {
-        console.log(error.code + error);
-      }
+
+      deleteCategory(row);
 
       tableData.splice(row.index, 1);
       setTableData([...tableData]);
@@ -167,7 +172,7 @@ const Dashboard = () => {
       console.log(response);
       setTableData([...response.data]);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
     setLoading(false);
   };
