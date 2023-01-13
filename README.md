@@ -21,7 +21,7 @@
    cd backend
    ```
 2. Create a copy of .env file from .env.example and edit the following fields:
-Note: please wrap INITIAL_USER_NAME in double-quotes
+Note: INITIAL_USER_NAME only wrap in double-quotes
    ```sh
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
@@ -30,9 +30,9 @@ Note: please wrap INITIAL_USER_NAME in double-quotes
    DB_USERNAME=root
    DB_PASSWORD=
    
-   INITIAL_USER_NAME="{Your admin name}"
-   INITIAL_USER_EMAIL={Your email}
-   INITIAL_USER_PASSWORDHASH={Your password}
+   INITIAL_USER_NAME="Your admin name"
+   INITIAL_USER_EMAIL="Your email"
+   INITIAL_USER_PASSWORDHASH="Your password"
    ``` 
 3. Install Composer packages
    ```sh
