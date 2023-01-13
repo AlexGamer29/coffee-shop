@@ -40,30 +40,6 @@ const Navbar = () => {
           </div>
           <div className="header__middle__menus">
             <nav className="main-nav ">
-              {/* Responsive Menu Button */}
-              {isResponsiveclose === true ? (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiXCircle />{" "}
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span
-                    className="menubar__button"
-                    style={{ display: "none" }}
-                    onClick={toggleClass}
-                  >
-                    {" "}
-                    <FiAlignRight />{" "}
-                  </span>
-                </>
-              )}
               <ul className={boxClass.join(" ")}>
                 <li className="menu-item">
                   <NavLink

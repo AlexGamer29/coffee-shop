@@ -153,7 +153,7 @@ li {
 
 .header__middle__logo img {
   max-width: 207px;
-  margin: 17px 0 0 0;
+  margin: 22px 0 0 0;
 }
 
 @media (max-width: 991px) {
@@ -165,7 +165,7 @@ li {
   }
   .header__middle__logo img {
     max-width: 197px;
-    margin: 27px 0 0 0;
+    margin: 27px 0;
   }
   .main-nav .menubar__button:hover {
     background-color: #f44336;
