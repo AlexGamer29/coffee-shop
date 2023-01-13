@@ -44,6 +44,9 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('/login', [PassportAuthController::class, 'login']);
 });
 
+Route::get('/products', [ProductsController::class, 'index']);
+
+
 Route::middleware('auth:api')->group(function () {
 
     Route::post('/logout', [PassportAuthController::class, 'logout']);
@@ -73,8 +76,6 @@ Route::middleware('auth:api')->group(function () {
     Route::delete('/sub-category/{id}', [SubCategoryController::class, 'destroy']);
 
     // Products
-    // Get all products
-    Route::get('/products', [ProductsController::class, 'index']);
     // Create product
     Route::post('/products', [ProductsController::class, 'store']);
     // Get product by id

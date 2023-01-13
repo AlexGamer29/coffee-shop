@@ -22,7 +22,7 @@ function HomeFeaturedProducts() {
 
   useEffect(() => {
     getAllProducts();
-  }, [data]);
+  }, []);
 
   return (
     <>

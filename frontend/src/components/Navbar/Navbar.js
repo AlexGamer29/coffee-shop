@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import logo from "../../assets/img/logo.jpg";
 
 import "./Navbar.css";
